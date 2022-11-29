@@ -10,9 +10,9 @@ const navLinks = [
 		icon: "account_circle",
 	},
 	{
-		title: "Settings",
-		route: "/settings",
-		icon: "settings",
+		title: "Chat",
+		route: "/chat",
+		icon: "chat",
 	},
 	{
 		title: "Memories",
@@ -29,10 +29,10 @@ const navLinks = [
 		route: "/events",
 		icon: "celebration",
 	},
-	{
-		title: "Room to Manoeuvre",
-		route: "/opportunuties",
-		icon: "emoji_events",
-	},
+	// {
+	// 	title: "Room to Manoeuvre",
+	// 	route: "/opportunuties",
+	// 	icon: "emoji_events",
+	// },
 ];
 export default navLinks;

@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bgcolor-400);
+  background-color: #3d5267;
   position: relative;
 }
 .popup-head button {
@@ -36,11 +36,12 @@
 .popup-head-title {
   font-size: 1.25rem;
   line-height: 2.5rem;
+  color: azure;
 }
 .popup-body {
   width: 100%;
   height: calc(100% - 2.5rem);
-  background-color: var(--bgcolor);
+  background-color: #1F2833;
   overflow-y: auto;
 }
 

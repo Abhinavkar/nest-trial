@@ -43,7 +43,7 @@ const WriteNewPost = ({ close }) => {
 						onChange={handleChange}
 						autoFocus
 					></textarea>
-					<Button text="Post" type="submit" />
+					<Button className="postButton" text="Post" type="submit" />
 				</form>
 			</div>
 		</Popup>

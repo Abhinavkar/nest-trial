@@ -20,14 +20,14 @@ const HeaderUserMenu = ({logout,close}) => {
 							Profile
 						</div>
 					</Link>
-					<Link to="/settings">
+					{/* <Link to="/settings">
 						<div className="header-user-menu-box__icon">
 							<span className="material-icons">settings</span>
 						</div>
 						<div className="header-user-menu-box__text">
 							Settings
 						</div>
-					</Link>
+					</Link> */}
 				</div>
 				<div className="header-user-menu-box-bottom">
 					<Button
