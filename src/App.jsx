@@ -10,6 +10,9 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Navigation from "./components/Navigation/Navigation";
 import GlobalContext from "./components/Context/GloablContext";
 import Header from "./components/Header/Header";
+import Events from "./components/Events/Events";
+import eventData from './Data/eventData';
+
 
 const App = () => {
 	AOS.init();
@@ -25,8 +28,8 @@ const App = () => {
 	return (
 		<>
 			{location.pathname !== "/" &&
-			location.pathname !== "/login" &&
-			location.pathname !== "/register" ? (
+				location.pathname !== "/login" &&
+				location.pathname !== "/register" ? (
 				<>					<Navigation />
 					<Header />
 					<main
@@ -35,13 +38,13 @@ const App = () => {
 							left: breakpoint("mobile")
 								? 0
 								: openNav
-								? "var(--side-width)"
-								: "7.5rem",
+									? "var(--side-width)"
+									: "7.5rem",
 							width: breakpoint("mobile")
 								? "100vw"
 								: openNav
-								? "calc(100vw - var(--side-width))"
-								: "calc(100vw - 7.5rem)",
+									? "calc(100vw - var(--side-width))"
+									: "calc(100vw - 7.5rem)",
 						}}
 					>
 						<Routes>
@@ -53,6 +56,21 @@ const App = () => {
 									</PrivateRoute>
 								}
 							/>
+							<Route
+								path="/events"
+								element={eventData.map(eventData => (
+										// <div className="eventCardsFlex">
+											<Events
+												image={eventData.image}
+												name={eventData.name}
+												desc={eventData.desc}
+											/>
+										//  </div>
+								))}
+
+							/>
+
+
 						</Routes>
 					</main>
 				</>

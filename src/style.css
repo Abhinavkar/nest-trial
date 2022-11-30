@@ -411,13 +411,16 @@ select::placeholder {
 }
 
 .main {
-  width: calc(100% - var(--side-width));
-  height: calc(100% - var(--head-height));
-  position: absolute;
+  /* width: calc(100% - var(--side-width)); */
+  /* height: calc(100% - var(--head-height)); */
+  position: relative;
   top: var(--head-height);
   left: var(--side-width);
   padding: 1rem;
-}
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5%;
+} 
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -450,5 +453,7 @@ select::placeholder {
 .dispn {
   display: none !important;
 }
-
-/*# sourceMappingURL=style.css.map */
+.eventCardsFlex{
+  display: grid;
+  margin-bottom: 1%;
+}

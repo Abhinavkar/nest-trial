@@ -101,3 +101,9 @@
   font-size: 14px;
   color: rgb(255, 217, 0);
 }
+
+
+.teamInfo img{
+  width: 55%;
+  margin: 4% 0 -5% 22.5%;
+}

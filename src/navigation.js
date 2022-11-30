@@ -14,11 +14,11 @@ const navLinks = [
 		route: "https://chat-doxeo1j4l-abhinavkar.vercel.app/login",
 		icon: "chat",
 	},
-	{
-		title: "Memories",
-		route: "/memories",
-		icon: "emoji_emotions",
-	},
+	// {
+	// 	title: "Memories",
+	// 	route: "/memories",
+	// 	icon: "emoji_emotions",
+	// },
 	{
 		title: "Connections",
 		route: "/connections",
@@ -27,6 +27,11 @@ const navLinks = [
 	{
 		title: "Events",
 		route: "/events",
+		icon: "event",
+	},
+	{
+		title: "Achievements",
+		route: "/achievements",
 		icon: "celebration",
 	},
 	{
