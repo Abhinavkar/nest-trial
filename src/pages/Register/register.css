@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--brown-700);
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* background-color: var(--brown-700); */
+  background-image: url("../../images/home-bg.jpeg");
 }
 .register-container {
   width: 60%;

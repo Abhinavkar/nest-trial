@@ -16,13 +16,16 @@ button {
   border-radius: 5px;
   border: 2px solid transparent;
   outline: 2px solid transparent;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 500px;
+
 }
 .btn:hover {
   border-radius: 500px;
+  scale: 1.1;
 }
 .btn:active, .btn:focus {
   box-shadow: var(--shadow-elevation-4dp);
@@ -255,5 +258,6 @@ button {
   background-color: var(--back-shadow-dark);
   border: 1px solid var(--back-shadow-dark);
 }
+
 
 /*# sourceMappingURL=button.css.map */

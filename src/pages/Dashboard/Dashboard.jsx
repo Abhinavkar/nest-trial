@@ -57,7 +57,7 @@ const Dashboard = () => {
 			comments: [
 				{
 					id: "656asdc6a",
-					content: "dkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aac",
+					content: "Test Comment 1",
 					author: {
 						name: "Akshat Mittal",
 						email: "akshatmittal2506@gmail.com",

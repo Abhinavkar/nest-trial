@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./login.css";
 import loginBg from "../../images/login-bg.jpeg";
-import a from "../../images/a.svg";
+import a from "../../images/home-bg.jpeg";
 import Button from "../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
 import GlobalContext from "../../components/Context/GloablContext";

@@ -29,10 +29,10 @@ const navLinks = [
 		route: "/events",
 		icon: "celebration",
 	},
-	// {
-	// 	title: "Room to Manoeuvre",
-	// 	route: "/opportunuties",
-	// 	icon: "emoji_events",
-	// },
+	{
+		title: "Admin",
+		route: "/admin",
+		icon: "contacts",
+	},
 ];
 export default navLinks;
