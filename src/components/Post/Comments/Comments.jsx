@@ -57,12 +57,14 @@ const Comments = ({ close, comments, submit }) => {
 						></textarea>
 						<div className="comments-add-form-group">
 							<Button
+								className="cancelCommentButton"
 								text="Cancel"
 								type="reset"
 								variant="neuro"
 							/>
 							<Button
-								text="Post"
+								className="addCommentButton"
+								text="Add Comment"
 								type="submit"
 								variant="neuro"
 								disabled={userComment.content === ""}

@@ -8,7 +8,7 @@ button {
 }
 
 .btn {
-  background-color: var(--blue);
+  background-color: var(--pink);
   color: var(--bgcolor);
   font-size: 1rem;
   margin: 0.25rem;
@@ -16,13 +16,16 @@ button {
   border-radius: 5px;
   border: 2px solid transparent;
   outline: 2px solid transparent;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 500px;
+
 }
 .btn:hover {
   border-radius: 500px;
+  scale: 1.1;
 }
 .btn:active, .btn:focus {
   box-shadow: var(--shadow-elevation-4dp);
@@ -216,18 +219,22 @@ button {
   background-color: var(--transparent);
 }
 .btn-neuro {
-  border: none;
-  color: #090909;
-  padding: 0.7em 1.7em;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  color: white;
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+  margin-right: 0.8rem;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgcolor);
+  transition: all var(--transition-time) ease-in-out;
+  background: red;
 }
 .btn-neuro:hover {
-  border-radius: 5px;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  scale: 1.2;
+  /* border-radius: 5px; */
+  /* box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff; */
 }
 .btn-neuro:disabled {
   box-shadow: none;
@@ -251,5 +258,6 @@ button {
   background-color: var(--back-shadow-dark);
   border: 1px solid var(--back-shadow-dark);
 }
+
 
 /*# sourceMappingURL=button.css.map */

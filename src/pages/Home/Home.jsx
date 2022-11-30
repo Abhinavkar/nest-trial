@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
 import waves from "../../images/wave.svg";
-import homeBg from "../../images/home-bg.jpg";
+import homeBg from "../../images/home-bg.jpeg"
 import Button from "../../components/Button/Button";
 
 const Home = () => {
@@ -14,10 +14,10 @@ const Home = () => {
 		>
 			<div className="home-title">
 				<span data-aos="fade-left" data-aos-duration="1000">
-					Meeting the moment
+					Alumni
 				</span>
 				<span data-aos="fade-left" data-aos-duration="1000">
-					Together
+					Nest
 				</span>
 			</div>
 			<div
@@ -33,14 +33,14 @@ const Home = () => {
 				>
 					<Button
 						text="Log In"
-						color="brown"
+						color="green"
 						containsLink
 						link="/login"
 						size="large"
 					/>
 					<Button
 						text="Register"
-						color="brown"
+						color="orange"
 						containsLink
 						link="/register"
 						size="large"

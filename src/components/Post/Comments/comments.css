@@ -40,12 +40,13 @@
 }
 .comments-add-form textarea {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 1rem;
   resize: vertical;
+  border: 1px solid #66FCF1;
 }
 .comments-add-form textarea:active, .comments-add-form textarea:focus {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.107);
 }
 .comments-add-form button {
   margin: 1rem;
@@ -84,5 +85,25 @@ textarea:active + .comments-add-form-group, textarea:focus + .comments-add-form-
 .comment .post-stats .material-icons {
   font-size: 1rem;
 }
+.cancelCommentButton{
+  color: red;
+  border: 1px solid red;
+  background-color: var(--bgcolor);
+  transition: all var(--transition-time) ease-in-out;
+  background: #1F2833;}
+.cancelCommentButton:hover{
+  scale:1.1;
+}
+.addCommentButton{
+  background-color: var(--bgcolor);
+  transition: all var(--transition-time) ease-in-out;
+  background: #1F2833;
+  border: 1px solid rgb(56, 56, 255);
+  border-radius: 500px;
+  color: rgb(56, 56, 255);
+}
 
+.addCommentButton:hover{
+  scale: 1.1;
+}
 /*# sourceMappingURL=comments.css.map */

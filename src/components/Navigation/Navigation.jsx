@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import navLinks from "../../navigation.js";
 import "./navigation.css";
 import { Link } from "react-router-dom";
-import favicon from "../../images/favicon.svg";
+import alumniLogo from "../../images/Alumniicon.png";
 import GlobalContext from "../Context/GloablContext.jsx";
 
 const Navigation = () => {
@@ -34,7 +34,7 @@ const Navigation = () => {
 					}}
 				>
 					<Link to="/">
-						<img src={favicon} alt="Alumni Portal" />
+						<img  className="navigation-icon" src={alumniLogo} alt="Alumni Portal" />
 					</Link>
 				</div>
 				<div className="navigation-body">

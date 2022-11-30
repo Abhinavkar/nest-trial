@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import GlobalContext from "../Context/GloablContext";
 import "./header.css";
 import HeaderUserMenu from "./HeaderUserMenu";
-
+// import {menuIcon} from "../../images/menu-icon.svg" 
 const Header = () => {
 	const { openNav, setOpenNav, setIsAuthenticated, user, breakpoint } =
 		useContext(GlobalContext);
@@ -33,8 +33,12 @@ const Header = () => {
 			<header className="header" data-aos="fade-down">
 				<div className="header-left">
 					<button onClick={() => setOpenNav(!openNav)}>
+						{/* <img className="menu-icon" src={menuIcon}></img> */}
 						<span className="material-icons">menu</span>
 					</button>
+					<div className="header-title-container">
+						<h1 className="header-title"> Alumni Nest</h1>
+					</div>
 				</div>
 				<div
 					className="header-right"
