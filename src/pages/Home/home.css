@@ -72,16 +72,17 @@
   flex-direction: row;
 }
 .recentEventsCard{
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 28%;
   margin-left: 1%;
+  background-color: rgba(255, 255, 255, 0.304);
 }
 .eventImage img{
   height: 250px;
   width: 90%;
   margin-left: 5%;
   margin-top: 5%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .eventName{

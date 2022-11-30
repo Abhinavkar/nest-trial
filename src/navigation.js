@@ -11,7 +11,7 @@ const navLinks = [
 	},
 	{
 		title: "Chat",
-		route: "/chat",
+		route: "https://chat-doxeo1j4l-abhinavkar.vercel.app/login",
 		icon: "chat",
 	},
 	{
