@@ -27,8 +27,7 @@ const App = () => {
 			{location.pathname !== "/" &&
 			location.pathname !== "/login" &&
 			location.pathname !== "/register" ? (
-				<>
-					<Navigation />
+				<>					<Navigation />
 					<Header />
 					<main
 						className="main"

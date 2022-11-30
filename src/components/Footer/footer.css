@@ -1,0 +1,82 @@
+.main-footer{
+    width: 98%;
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 35px 35px 0 0;
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-left: 1%;
+    padding-top: 1%;
+
+}
+.footer-top{
+    width: 98%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1%;
+    padding-top: 1%;
+
+}
+.leftFooterTitle{
+    font-size: 2rem;
+    font-weight: 600;
+    color: azure;
+    width: 100%;
+}
+.footer-left{
+    width: 45%;
+    padding-left: 2%;
+}
+.footer-right{
+    width:45%;
+    padding-left: 2%;
+}
+
+.footerIcon{
+    height: 2rem;
+    width: 2rem;
+    margin-left: 5px;
+}
+.footerIcon:hover{
+    scale:1.1;
+}
+.hr{
+    color: azure;
+}
+.footer-bottom p{
+    color: gray;
+    margin-left:1.5% ;
+}
+.footer-bottom{
+    margin-top: 1%;
+    border-top: 1px solid white;
+    background-color: black;
+}
+.suggestionArea{
+    color: azure;
+    display: block;
+}
+.footer-right{
+    display: flex;
+    flex-direction: column !important;;
+}
+.suggestionForm{
+    display: flex !important;
+}
+.send{
+    height: 2rem;
+    width: 3rem;
+}
+.send:hover{
+    color: white;
+    border: 1px solid white !important;
+    background-color: rgba(0, 0, 0, 0.489) !important;
+}
+.send:active{
+    color: white;
+    border-radius: 500px;
+    border: 1px solid white !important;
+    background-color: rgba(255, 255, 255, 0.489) !important;
+}

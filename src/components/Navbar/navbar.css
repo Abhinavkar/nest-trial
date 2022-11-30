@@ -1,0 +1,148 @@
+html {
+    scroll-behavior: smooth;
+    transition: 0.2s;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+    margin: 0 20px;
+    /* background-color: #1F2833 ; */
+    
+}
+
+.navbar-right {
+    align-items: center;
+    display: flex;
+    width: 60%;    
+    justify-content: flex-end  ;
+}
+
+.nav-links {
+    padding: 5px 8px 5px 8px;
+    display: flex;
+    font-family: 'Montserrat';
+    list-style: none;
+    justify-content: space-between;
+
+}
+
+.nav-links-sidebar {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    margin-top: 50px;
+    font-size: 1rem;
+
+
+}
+
+.nav-links li{
+    margin: 0 10px;
+    padding: 0 5px;
+}
+
+.nav-link>a {
+    text-decoration: none;
+    color: white;
+    
+
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 0px;
+    border-radius: 2px;
+    background: linear-gradient(91.74deg, #7B5BC7 -16.69%, #EA388D 126.11%);
+    transition: 0.4s ease;
+
+}
+
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link-sidebar>a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.sidebar-hamburger,
+.sidebar-menu {
+    display: none;
+    pointer-events: none;
+}
+
+.close-btn {
+    color: white;
+    float: right;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.sidebar-menu {
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #131313;
+    z-index: 10;
+    overflow-x: hidden;
+    position: fixed;
+    transition: 0.6s;
+}
+
+/* @media only screen and (max-width: 992px) {
+
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        display: none;
+        pointer-events: none;
+    }
+
+    .sidebar-hamburger,
+    .sidebar-menu {
+        display: block;
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .sidebar-menu {
+        width: 100vw;
+    }
+
+    .sidebar-hamburger>img {
+        transform: scale(0.7);
+    }
+
+
+    .logo-container img {
+        transform: scale(0.8);
+    }
+
+
+
+} */
