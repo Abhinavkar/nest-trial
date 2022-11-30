@@ -1,7 +1,6 @@
 .login {
   width: 100vw;
   height: 100vh;
-  /* background-position: center; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,11 +11,12 @@
   width: 60%;
   height: 70%;
   border-radius: 8px;
-  background-color: var(--brown);
+  background-color:#0000004c;
   display: flex;
   justify-content: center;
   align-content: center;
   overflow: hidden;
+  padding: 1.5% ;
 }
 @media (max-width: 900px) {
   .login-container {
@@ -28,14 +28,14 @@
   height: 100%;
 }
 .login-left {
-  background-color: var(--brown-100);
+  background-color: #1221424e;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: column;
 }
 .login-left a {
-  color: var(--brown-700);
+  color: #4E0EFF;
   text-decoration: underline;
   margin: 0 0.35rem;
   font-size: 0.875rem;
@@ -63,7 +63,7 @@
   margin: 0.5rem 0;
 }
 .login-left-form label {
-  color: var(--brown);
+  color: #4E0EFF;
 }
 .login-left-form label .material-icons {
   font-size: 1.1rem;
@@ -77,25 +77,34 @@
   border-bottom: 2px solid var(--back-shadow);
 }
 .login-left-form input:active, .login-left-form input:focus {
-  border-bottom: 2px solid var(--brown);
+  border-bottom: 2px solid #4E0EFF;
 }
 .login-left-form input:active + label,
 .login-left-form input:focus + label {
-  color: var(--brown-700);
+  color: #4E0EFF;
 }
 .login-left-form button {
-  width: 40%;
+  width: 30%;
+  color: aliceblue;
+  background-color: #4E0EFF;
+  margin-left: 32%;
+}
+.login-left-form button:hover {
+  width: 30%;
+  color: aliceblue;
+  background-color: #4E0EFF;
 }
 .login-left-bottom {
   height: 20%;
   flex-flow: row;
   font-size: 0.875rem;
+  color: #4E0EFF;
 }
 .login-left-title {
   width: 100%;
   font-size: 2rem;
   line-height: 2.5rem;
-  color: var(--brown-700);
+  color: #4E0EFF;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -108,7 +117,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 0.5rem;
+  padding:0.5rem;
+  background-image: url("../../images/login-bg.png");
+  background-color: #1221424e;
 }
-
+.alertAcc{
+  color: aliceblue;
+}
+.m{
+  color: aliceblue;
+}
 /*# sourceMappingURL=login.css.map */

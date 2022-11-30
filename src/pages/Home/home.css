@@ -1,50 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 .home {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: lighten;
-  background-color: rgba(255, 255, 255, 0.046);
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.home-cover {
   width: 100%;
-  /* height: 100%; */
-  background-repeat: no-repeat;
+  height: 100%;
+  height: auto;
+  /* background-color: #131324; */
+  color: #66FCF1;
+  background: url("../../images/homeBg.jpg");
   background-size: cover;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.aboutUs{
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  color: aqua;
+  flex-direction: column;
+
 }
 
-.home-cover-nav {
-  width: 30%;
-  height: 45vh;
+.aboutUsBottom{
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0 10vw;
+  flex-direction: row;
+  background-color: #00000049;
+  padding: 2%;
+  margin: 2.5% 2.5% 0 0;
+}
+.homeLogoMain{
+  width: 100%;
+  text-align: center;
+  font-size: 84px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+ .home-nav {
+  display: flex;
+  right: 0;
+  margin-top: 1em;
+  margin-left: calc(100% - 15em);
+  position: relative;
+}
+.home-nav a:hover{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.homeLogoContainer img{
+  height: 20rem;
+  width: 30rem;
+  margin-left: 10%;
+}
+.homeLogoContainer{
+  width:35%;
+}
+.aboutUsInfo{
+  width: 55%;
+  margin-top: 3%;
+  margin-left: 1%;
+  color: #45A29E;
+}
+.recentEvents{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  background-color: #00000047;
+  padding: 2%;
+  margin: 2.5% 0 0 2.5%;
+}
+.recentEventsLogo{
+  width: 25%;
+}
+.recentEventsCardGroup{
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+}
+.recentEventsCard{
+  border: 1px solid white;
+  width: 28%;
+  margin-left: 1%;
+}
+.eventImage img{
+  height: 250px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  border: 1px solid white;
 }
 
-.home-title {
-  height: 50%;
-  font-size: 6rem;
-  line-height: 7rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  flex-flow: column;
-  color: var(--white);
-  padding: 0 5rem;
+.eventName{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 30px;
+  font-family: 'Anton', sans-serif;
+  color:black;
+  text-decoration: underline;
+  color: rgb(215, 183, 0);
 }
-
-/*# sourceMappingURL=home.css.map */
+.eventDesc{
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 5%;
+  font-size: 14px;
+  color: rgb(255, 217, 0);
+}

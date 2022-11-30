@@ -1,9 +1,16 @@
 .main{
-  background-color: #3d5267;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+
+}
+*{
+  
 }
 
 .dashboard-container{
-  background-color: #1F2833;
+  background-color: #00000090;
   padding-top: 2%;
   border-radius: 15px;
 }

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./login.css";
-import loginBg from "../../images/login-bg.jpeg";
-import a from "../../images/home-bg.jpeg";
+import loginBg from "../../images/login-bg.png";
+import a from "../../images/homeBg.jpg";
 import Button from "../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
 import GlobalContext from "../../components/Context/GloablContext";
@@ -76,28 +76,23 @@ const Login = () => {
 								/>
 							</div>
 							<div className="login-left-form-group">
-								<Link to="/forgot">Forgot Password?</Link>
+								{/* <Link to="/forgot">Forgot Password?</Link> */}
 								<Button
 									type="submit"
 									text="Login"
-									color="brown"
+									size="small"
 								/>
 							</div>
 						</form>
 					</div>
 					<div className="login-left-bottom">
-						<span>Don't have an account? </span>
-						<Link to="/register">Sign Up</Link>
+						<span className="alertAcc">Don't have an account? </span>
+						<Link className="signUp" to="/register">Sign Up</Link>
 					</div>
 				</div>
-				<div
-					className="login-right"
-					style={{
-						backgroundImage: `url(${loginBg})`,
-					}}
-				>
+				<div className="login-right">
 					<button className="icon" onClick={() => navigate("/")}>
-						<span className="material-icons">close</span>
+						<span className="material-icons m" color= "white">close</span>
 					</button>
 				</div>
 			</div>

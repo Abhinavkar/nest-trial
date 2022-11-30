@@ -20,7 +20,7 @@
   align-items: center;
   background: transparent;
   padding: 1rem;
-  background-color:#3d5267 ;
+  background-color: #00000090;
 }
 .navigation-pane {
   width: var(--side-width);

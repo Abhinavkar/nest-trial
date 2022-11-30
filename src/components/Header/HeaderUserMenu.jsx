@@ -33,12 +33,12 @@ const HeaderUserMenu = ({logout,close}) => {
 					<Button
 						text={
 							<>
-								<span className="material-icons">logout</span>
+								<span className="material-icons lg">logout</span>
 								<span>Logout</span>
 							</>
 						}
-						color="Blue"
-						variant="neuro"
+						color="red"
+						variant=""
 						style={{
 							display: "flex",
 						}}
