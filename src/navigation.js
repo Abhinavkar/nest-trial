@@ -21,7 +21,7 @@ const navLinks = [
 	// },
 	{
 		title: "Connections",
-		route: "/connections",
+		route: "/productlist",
 		icon: "people",
 	},
 	{
