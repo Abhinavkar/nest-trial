@@ -29,7 +29,7 @@ export const GlobalProvider = ({ children }) => {
 		desgination: "MERN Stack Developer",
 		dob: "2002-06-25",
 		gender: "Male",
-		avatar: "https://avatars.githubusercontent.com/u/75711413?v=4",
+		avatar: "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?b=1&s=612x612&w=0&k=20&c=zdMrnElXIALTyT35otBWBGYH23t0zYiwwsg-6rjwnU4=",
 	});
 	const axiosInstance = axios.create({
 		baseURL: "http://localhost:3025/",

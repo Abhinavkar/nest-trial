@@ -8,7 +8,7 @@ const ProductList = (props) => {
         getProducts();
     },[])
     const getProducts = async () => {
-        const data = await fetch("http://localhost:3025/secondary/Carmel");
+        const data = await fetch("http://localhost:3025/secondary/Carmel School, Rourkela");
         const products_data = await data.json();
         console.log(products_data)
         ProductCtx.setProducts(products_data.matcheddata);

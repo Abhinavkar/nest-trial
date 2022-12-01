@@ -1,5 +1,5 @@
 
-  .profileView{
+.profileView{
     color:aliceblue;
     align-items: center;
     align-content: center;
@@ -13,14 +13,36 @@ padding: 5%;
   flex-direction: row;
   align-items: center;
   text-align: center;
-  margin-left: 1%;
+  margin-left: -30%;
   background-color: rgba(255, 255, 255, 0.304);
 }
+.profImage img{
+  width: 18rem;
+  height: 20rem;
+}
 .profImage{
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 20rem;
   width: 20rem;
 }
 .textDetails{
+  padding-left: 6%;
   width: 15rem;
+  margin: 0;
+}
+.textDetails p{
+  margin: 0;
+}
+.profName{
+  font-size: 34px;
+  font-weight: 500;
+  color: gold !important;;
+}
+.profDesignation{
+  color: rgb(197, 168, 0) !important;
+}
+.profUsername{
+  color: rgb(99, 99, 211);
+}
+.profcurrentOrganization{
 }
