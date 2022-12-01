@@ -33,7 +33,7 @@ const Navigation = () => {
 							: "center",
 					}}
 				>
-					<Link to="/">
+					<Link to="/dashboard">
 						<img  className="navigation-icon" src={alumniLogo} alt="Alumni Portal" />
 					</Link>
 				</div>
