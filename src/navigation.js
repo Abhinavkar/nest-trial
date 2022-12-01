@@ -39,5 +39,6 @@ const navLinks = [
 		route: "/admin",
 		icon: "contacts",
 	},
+	
 ];
 export default navLinks;

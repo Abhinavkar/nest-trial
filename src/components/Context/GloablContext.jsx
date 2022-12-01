@@ -18,9 +18,9 @@ export const GlobalProvider = ({ children }) => {
 		breakpoint("mobile") || breakpoint("tab") ? false : true
 	);
 	const [user, setUser] = useState({
-		name: "Akshat Mittal",
+		name: "Abhinav Kar",
 		status: "Developing",
-		email: "akshatmittal2506@gmail.com",
+		email: "karAbvinav@gmail.com",
 		phone: 9456849466,
 		username: "akshatmittal61",
 		batch: "2020",
@@ -29,10 +29,10 @@ export const GlobalProvider = ({ children }) => {
 		desgination: "MERN Stack Developer",
 		dob: "2002-06-25",
 		gender: "Male",
-		avatar: "https://avatars.githubusercontent.com/u/81064287?v=4",
+		avatar: "https://avatars.githubusercontent.com/u/75711413?v=4",
 	});
 	const axiosInstance = axios.create({
-		baseURL: "http://localhost:5000/",
+		baseURL: "http://localhost:3025/",
 	});
 	return (
 		<GlobalContext.Provider
