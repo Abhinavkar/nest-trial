@@ -1,13 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 .reg-form{
     width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: aliceblue;
 }
 
-.reg-heading{}
+.reg-card{
+    background-color: rgba(0, 0, 0, 0.247);
+    padding: 1% 2% 2% 2%;
+    border-radius: 15px;
+}
 
-.reg-name{}
+.reg-heading{
+    font-size: 3.2rem;
+    color: rgb(0, 167, 186);
+    font-weight: 400;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 1%;
+}
+.reg-card p{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+.reg-card input{
+    margin-bottom: 0.3rem;
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.386);
+    width: 90%;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+.reg-card select{
+    margin-bottom: 0.3rem;
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.386);
+    width: 80%;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+.dropDown{
+    width: 50%;
+}
+.eduDetails{
+    width:35rem;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.reg-group{}
+.reg-group{
+    border-radius: 5px;
+    /* background-color: rgba(255, 255, 255, 0.158); */
+}
+.reg-group button{
+    border-radius: 5px;
+    width: 100%;
+    /* justify-content: center; */
+    /* background-color: rgba(255, 255, 255, 0.158); */
+}
 
+.reg-button{
+    margin-top: 1.5rem;
+    margin-left: 4rem;
+    background-color: rgb(255, 238, 0);
+    padding: 1%;
+    border-radius: 30px;
+    width: 3rem;
+    height: 2rem;
+}
+
+.errMessage{
+    color: red;
+}
+
+.linkToLogIn{
+    padding-top: 1rem;
+    padding-left: 25%;
+}
