@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import alumniLogo from "../../images/Alumniicon.png";
 import GlobalContext from "../Context/GloablContext.jsx";
 
-const Navigation = () => {
+const Connections = () => {
 	const { openNav, breakpoint } = useContext(GlobalContext);
 	return (
 		<section
@@ -143,4 +143,4 @@ const Navigation = () => {
 	);
 };
 
-export default Navigation;
+export default Connections;

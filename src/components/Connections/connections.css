@@ -1,0 +1,12 @@
+.main-conn{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conn-sec,.conn-hig,.conn-grad,.conn-postGrad{
+    width: 4rem !important;;
+    height: 4rem !important;
+    border: 1px solid whitesmoke;
+    border-radius:15px ;
+    background-color: rgba(0, 0, 0, 0.279);
+}

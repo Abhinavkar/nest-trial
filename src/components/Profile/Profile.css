@@ -1,25 +1,26 @@
 
   .profileView{
-
     color:aliceblue;
     align-items: center;
     align-content: center;
     margin: 10% 42% 10% 35%;
-
   }
   
 .recentProfileCard{
-  /* border: 1px solid white; */
-  width: 200%;
+  border-radius: 20px;
+padding: 5%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   text-align: center;
   margin-left: 1%;
   background-color: rgba(255, 255, 255, 0.304);
 }
-.profileImage img{
-  height: 250px;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 5%;
-  /* border: 1px solid white; */
+.profImage{
+  border: 1px solid white;
+  height: 20rem;
+  width: 20rem;
+}
+.textDetails{
+  width: 15rem;
 }
