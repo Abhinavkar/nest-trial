@@ -10,7 +10,7 @@ const userSignupSchema = new Schema({
         required: true,
         unique: true
     },
-    image:{
+    batch:{
         type: String,
         required: true
     },

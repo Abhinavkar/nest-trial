@@ -8,7 +8,7 @@ const {User}  = require('../models/dbloginSignup');
 router.post('/signup',async(req,res)=>{
     try{
             let error='';
-            let {full_name,email,image,password,secondary_school,high_school,graduate,post_graduate,doctarate}=req.body;
+            let {full_name,email,batch,password,secondary_school,high_school,graduate,post_graduate,doctarate}=req.body;
             
             //generate password hash
             const salt=await bcrypt.genSalt(10);// 1st creating salt
@@ -35,8 +35,8 @@ router.post('/signup',async(req,res)=>{
                     message:error
                 })
             }
-            if(image=='' && error==''){
-                error="Image link missing";
+            if(batch=='' && error==''){
+                error="Batch missing";
                 return res.status(401).json({
                     message:error
                 })
@@ -88,7 +88,7 @@ router.post('/signup',async(req,res)=>{
                     message:error
                 })
             }
-            const user = new User({full_name,email,image,password,secondary_school,high_school,graduate,post_graduate,doctarate});
+            const user = new User({full_name,email,batch,password,secondary_school,high_school,graduate,post_graduate,doctarate});
             // console.log(user);
             await user.save();
             return res.status(200).json({

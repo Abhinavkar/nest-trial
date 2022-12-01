@@ -10,7 +10,7 @@ const Register = (props) => {
     const [formInput, setFormInput] = useState({
         full_name: '',
         email: '',
-        image: '',
+        batch: '',
         password: '',
         secondary_school: '',
         high_school: '',
@@ -30,10 +30,10 @@ const Register = (props) => {
             email: event.target.value
         })
     }
-    const imageHandler = (event) => {
+    const batchHandler = (event) => {
         setFormInput({
             ...formInput,
-            image: event.target.value
+            batch: event.target.value
         })
     }
     const passwordHandler = (event) => {
@@ -85,7 +85,7 @@ const Register = (props) => {
                 message: 'Email is required'
             })
         }
-        else if (formInput.image == '') {
+        else if (formInput.batch == '') {
             setErr({
                 isError: true,
                 message: 'profile pic is required'
@@ -141,7 +141,7 @@ const Register = (props) => {
         const use = {
             full_name: formData.full_name,
             email: formData.email,
-            image: formData.image,
+            batch: formData.batch,
             password: formData.password,
             secondary_school: formData.secondary_school,
             high_school: formData.high_school,
@@ -173,8 +173,8 @@ const Register = (props) => {
                             <input type="email" placeholder="Email" onChange={emailHandler} required></input>
                         </div>
                         <div className="reg-group">
-                            <p>Enter profile pic link : </p>
-                            <input type="url" placeholder="Link" onChange={imageHandler} required></input>
+                            <p>Batch : </p>
+                            <input type="text" placeholder="Batch" onChange={batchHandler} required></input>
                         </div>
                         <div className="clearfix"></div>
                         <div className="reg-group1">
