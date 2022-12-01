@@ -5,11 +5,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Navigation from "./components/Navigation/Navigation";
 import GlobalContext from "./components/Context/GloablContext";
 import Header from "./components/Header/Header";
+import Events from "./components/Events/Events";
+import eventData from './Data/eventData';
 
 const App = () => {
 	AOS.init();
@@ -25,33 +26,38 @@ const App = () => {
 	return (
 		<>
 			{location.pathname !== "/" &&
-			location.pathname !== "/login" &&
-			location.pathname !== "/register" ? (
-				<>					<Navigation />
+				location.pathname !== "/login" &&
+				location.pathname !== "/register" ? (
+				<>
+					<Navigation />
 					<Header />
-					<main
-						className="main"
+					<main className="main"
 						style={{
 							left: breakpoint("mobile")
 								? 0
 								: openNav
-								? "var(--side-width)"
-								: "7.5rem",
+									? "var(--side-width)"
+									: "7.5rem",
 							width: breakpoint("mobile")
 								? "100vw"
 								: openNav
-								? "calc(100vw - var(--side-width))"
-								: "calc(100vw - 7.5rem)",
-						}}
-					>
+									? "calc(100vw - var(--side-width))"
+									: "calc(100vw - 7.5rem)",}}>
 						<Routes>
-							<Route
-								path="/dashboard"
+							<Route path="/dashboard"
 								element={
-									<PrivateRoute>
 										<Dashboard />
-									</PrivateRoute>
-								}
+								}/>
+
+							<Route
+								path="/events"
+								element={eventData.map(eventData => (
+									<Events
+										image={eventData.image}
+										name={eventData.name}
+										desc={eventData.desc}
+									/>
+								))}
 							/>
 						</Routes>
 					</main>

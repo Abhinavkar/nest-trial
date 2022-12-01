@@ -30,6 +30,7 @@ const HeaderUserMenu = ({logout,close}) => {
 					</Link> */}
 				</div>
 				<div className="header-user-menu-box-bottom">
+				<Link to="/">
 					<Button
 						text={
 							<>
@@ -44,6 +45,7 @@ const HeaderUserMenu = ({logout,close}) => {
 						}}
 						onClick={() => logout()}
 					/>
+					</Link>
 				</div>
 			</div>
 		</div>
