@@ -11,87 +11,89 @@ import GlobalContext from "./components/Context/GloablContext";
 import Header from "./components/Header/Header";
 import Events from "./components/Events/Events";
 import Profile from "./components/Profile/Profile";
-import eventData from './Data/eventData';
-import profileData from './Data/profileData';
+import eventData from "./Data/eventData";
+import profileData from "./Data/profileData";
+import DocumentUpload from "./pages/DocumentUpload/DocumentUpload";
 
 const App = () => {
-	AOS.init();
-	const location = useLocation();
-	const { openNav, setOpenNav, setIsAuthenticated, breakpoint } =
-		useContext(GlobalContext);
-	useEffect(() => {
-		let isLocalAuthenticated = localStorage.getItem("isAuthenticated");
-		if (isLocalAuthenticated)
-			setIsAuthenticated(JSON.parse(isLocalAuthenticated));
-		else setIsAuthenticated(true);
-	}, [breakpoint, setIsAuthenticated]);
-	return (
-		<>
-			{location.pathname !== "/" &&
-				location.pathname !== "/login" &&
-				location.pathname !== "/register" ? (
-				<>
-					<Navigation />
-					<Header />
-					<main className="main"
-						style={{
-							left: breakpoint("mobile")
-								? 0
-								: openNav
-									? "var(--side-width)"
-									: "7.5rem",
-							width: breakpoint("mobile")
-								? "100vw"
-								: openNav
-									? "calc(100vw - var(--side-width))"
-									: "calc(100vw - 7.5rem)",}}>
-						<Routes>
-							<Route path="/dashboard"
-								element={
-										<Dashboard />
-								}/>
+  AOS.init();
+  const location = useLocation();
+  const { openNav, setOpenNav, setIsAuthenticated, breakpoint } =
+    useContext(GlobalContext);
+  useEffect(() => {
+    let isLocalAuthenticated = localStorage.getItem("isAuthenticated");
+    if (isLocalAuthenticated)
+      setIsAuthenticated(JSON.parse(isLocalAuthenticated));
+    else setIsAuthenticated(true);
+  }, [breakpoint, setIsAuthenticated]);
+  return (
+    <>
+      {location.pathname !== "/" &&
+      location.pathname !== "/login" &&
+      location.pathname !== "/register"&&
+	  location.pathname !== "/upload" ? (
+        <>
+          <Navigation />
+          <Header />
+          <main
+            className="main"
+            style={{
+              left: breakpoint("mobile")
+                ? 0
+                : openNav
+                ? "var(--side-width)"
+                : "7.5rem",
+              width: breakpoint("mobile")
+                ? "100vw"
+                : openNav
+                ? "calc(100vw - var(--side-width))"
+                : "calc(100vw - 7.5rem)",
+            }}
+          >
+            <Routes>
+              <Route path="/dashboard" element={<Dashboard />} />
+              
 
-							<Route
-								path="/events"
-								element={eventData.map(eventData => (
-									<Events
-										image={eventData.image}
-										name={eventData.name}
-										desc={eventData.desc}
-									/>
-								))}
-							/>
-							<Route
-								path="/profile"
-								element={profileData.map(profileData => (
-									<Profile
-										image={profileData.image}
-										name={profileData.name}
-										status={profileData.status}
-										desgination={profileData.desgination}
-										phone={profileData.phone}
-										currentOrganization={profileData.currentOrganization}
-										dob={profileData.dob}
-										gender={profileData.gender}
-										username={profileData.username}
-										batch={profileData.batch}
-
-
-									/>
-								))}
-							/>
-						</Routes>
-					</main>
-				</>
-			) : (
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/login" element={<Login />} />
-					<Route path="/register" element={<Register />} />
-				</Routes>
-			)}
-		</>
-	);
+              <Route
+                path="/events"
+                element={eventData.map((eventData) => (
+                  <Events
+                    image={eventData.image}
+                    name={eventData.name}
+                    desc={eventData.desc}
+                  />
+                ))}
+              />
+              <Route
+                path="/profile"
+                element={profileData.map((profileData) => (
+                  <Profile
+                    image={profileData.image}
+                    name={profileData.name}
+                    status={profileData.status}
+                    desgination={profileData.desgination}
+                    phone={profileData.phone}
+                    currentOrganization={profileData.currentOrganization}
+                    dob={profileData.dob}
+                    gender={profileData.gender}
+                    username={profileData.username}
+                    batch={profileData.batch}
+                  />
+                ))}
+              />
+            </Routes>
+          </main>
+        </>
+      ) : (
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+		  <Route path="/upload" element={<DocumentUpload />} />
+        </Routes>
+      )}
+    </>
+  );
 };
 
 export default App;
