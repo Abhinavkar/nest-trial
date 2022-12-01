@@ -51,6 +51,9 @@ function Navbar() {
             <div className="navbar-right">
                 <ul className="nav-links">
                     <li className="nav-link">
+                        <NavLink to="/upload">Upload</NavLink>
+                    </li>
+                    <li className="nav-link">
                         <NavLink to="/login">Log-In</NavLink>
                     </li>
                     <li className="nav-link">

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 // Import the main component
 import { Viewer } from '@react-pdf-viewer/core'; // install this library
 // Plugins
@@ -12,78 +12,70 @@ import '../DocumentUpload/Docu.css';
 // Worker
 import { Worker } from '@react-pdf-viewer/core'; // install this library
 
-const DocumentUpload= () => {   
+const DocumentUpload = () => {
 
   // Create new plugin instance
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  
+
   // for onchange event
-  const [pdfFile, setPdfFile]=useState(null);
-  const [pdfFileError, setPdfFileError]=useState('');
+  const [pdfFile, setPdfFile] = useState(null);
+  const [pdfFileError, setPdfFileError] = useState('');
 
   // for submit event
-  const [viewPdf, setViewPdf]=useState(null);
+  const [viewPdf, setViewPdf] = useState(null);
 
   // onchange event
-  const fileType=['application/pdf'];
-  const handlePdfFileChange=(e)=>{
-    let selectedFile=e.target.files[0];
-    if(selectedFile){
-      if(selectedFile&&fileType.includes(selectedFile.type)){
+  const fileType = ['application/pdf'];
+  const handlePdfFileChange = (e) => {
+    let selectedFile = e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile && fileType.includes(selectedFile.type)) {
         let reader = new FileReader();
-            reader.readAsDataURL(selectedFile);
-            reader.onloadend = (e) =>{
-              setPdfFile(e.target.result);
-              setPdfFileError('');
-            }
+        reader.readAsDataURL(selectedFile);
+        reader.onloadend = (e) => {
+          setPdfFile(e.target.result);
+          setPdfFileError('');
+        }
       }
-      else{
+      else {
         setPdfFile(null);
         setPdfFileError('Please select valid pdf file');
       }
     }
-    else{
+    else {
       console.log('select your file');
     }
   }
 
   // form submit
-  const handlePdfFileSubmit=(e)=>{
+  const handlePdfFileSubmit = (e) => {
     e.preventDefault();
-    if(pdfFile!==null){
+    if (pdfFile !== null) {
       setViewPdf(pdfFile);
     }
-    else{
+    else {
       setViewPdf(null);
     }
   }
 
   return (
-    <div className='container'>
-    <br></br>
-    
+    <div className='container-upload'>
+      <br></br>
+      <p>Send us information of Alumni for better verification and experience</p>
       <form className='form-group' onSubmit={handlePdfFileSubmit}>
         <input type="file" className='form-control'
           required onChange={handlePdfFileChange}
         />
-        {pdfFileError&&<div className='error-msg'>{pdfFileError}</div>}
+        {pdfFileError && <div className='error-msg'>{pdfFileError}</div>}
         <br></br>
-        <button type="submit" className='btn btn-success btn-lg'>
-          <a href='/'>UPLOAD</a>
-        </button>
-      </form>
-      <br></br>
-      <h4>View PDF</h4>
-      <div className='pdf-container'>
-        {/* show pdf conditionally (if we have one)  */}
-        {viewPdf&&<><Worker workerUrl="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js">
-          <Viewer fileUrl={viewPdf}
-            plugins={[defaultLayoutPluginInstance]} />
-      </Worker></>}
+        <div className='upload-buttons'>
 
-      {/* if we dont have pdf or viewPdf state is null */}
-      {!viewPdf&&<>No pdf file selected</>}
-      </div>
+          <button type="submit" className='btn-upload'>
+            <a href='/'>UPLOAD</a>
+          </button>
+            <a href='/'>Back</a>
+        </div>
+      </form>
 
     </div>
   )
