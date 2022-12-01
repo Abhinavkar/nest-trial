@@ -1,4 +1,9 @@
-.reg-form{}
+.reg-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
 
 .reg-heading{}
 

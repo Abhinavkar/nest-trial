@@ -21,10 +21,14 @@
   text-decoration-color: #66FCF1;
   text-align: right;
   text-size-adjust: 20px;
+  margin-top: -175px;
+  margin-right: 20px;
+  font-size:50px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .quote1{
   text-align: right;
-  margin-top: -100px;
+  margin-top: -10px;
   color:rgb(255, 196, 0) !important;
   text-indent: 10%;
 }
