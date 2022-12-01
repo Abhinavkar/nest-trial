@@ -20,11 +20,24 @@ const Home = () => {
 					<Tada>
 					<div className="homeLogoMain">
 						<img src={Alumnlogo} />
-						<p className="Alumninest">Alumni Nest</p> <br></br> <p className="quotem">-Connecting Network</p>
+						
+						 <p className="Alumninest">Alumni Nest</p>
+						 </div>
+						{/*<p className="quotem">-Connecting Network</p>
 					</div>
 					<div>
 						<p className="quote1">"I think the success of any school can be measured by the contribution the alumni make to our national life." <br></br> ~ John F. Kennedy</p>
-					</div>
+					</div> */}
+					<div id="container">
+							Creating !
+							<div id="flip">
+								<div><div>Building Networks</div></div>
+								<div><div>Lifestyle</div></div>
+								<div><div>Everything</div></div>
+							</div>
+							AweSoMe!
+						</div>
+						
 					</Tada>
 					<Fade left>
 						<div className="aboutUsBottom">
