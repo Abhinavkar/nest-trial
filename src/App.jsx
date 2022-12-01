@@ -19,6 +19,7 @@ import connectionsData from './Data/connectionData';
 import ProductList from './components/conn/productList';
 import ProductState from './components/conn/ProductState';
 import Product  from './components/conn/product';
+import DocumentUpload from './pages/DocumentUpload/DocumentUpload';
 
 
 const App = () => {
@@ -37,7 +38,8 @@ const App = () => {
 			{location.pathname !== "/" &&
 				location.pathname !== "/login" &&
 				location.pathname !== "/register"&&
-				location.pathname!=="/connections" ? (
+				location.pathname !=="/connections" &&
+				location.pathname !== "/upload" ? (
 				<>
 					<Navigation />
 					<Header />
@@ -109,7 +111,7 @@ const App = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
-					
+					<Route path="/upload" element={<DocumentUpload />} /> 
 				</Routes>
 			)}
 		</>
