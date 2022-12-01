@@ -10,7 +10,9 @@ import Navigation from "./components/Navigation/Navigation";
 import GlobalContext from "./components/Context/GloablContext";
 import Header from "./components/Header/Header";
 import Events from "./components/Events/Events";
+import Profile from "./components/Profile/Profile";
 import eventData from './Data/eventData';
+import profileData from './Data/profileData';
 
 const App = () => {
 	AOS.init();
@@ -56,6 +58,25 @@ const App = () => {
 										image={eventData.image}
 										name={eventData.name}
 										desc={eventData.desc}
+									/>
+								))}
+							/>
+							<Route
+								path="/profile"
+								element={profileData.map(profileData => (
+									<Profile
+										image={profileData.image}
+										name={profileData.name}
+										status={profileData.status}
+										desgination={profileData.desgination}
+										phone={profileData.phone}
+										currentOrganization={profileData.currentOrganization}
+										dob={profileData.dob}
+										gender={profileData.gender}
+										username={profileData.username}
+										batch={profileData.batch}
+
+
 									/>
 								))}
 							/>
