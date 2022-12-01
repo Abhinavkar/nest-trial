@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 //import UserContext from '../adminDashboard/products/store/UserContext';
 import UserContext from '../../components/Store/UserContext'
 //import './signin.css';
@@ -77,7 +78,7 @@ const Register = (props) => {
         message: ''
     })
     const formSubmitHandler = async (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         if (formInput.email == '') {
             setErr({
                 isError: true,
@@ -105,25 +106,25 @@ const Register = (props) => {
         else if (formInput.high_school == '') {
             setErr({
                 isError: true,
-                message: 'high school is required'
+                message: 'High school is required'
             })
         }
         else if (formInput.graduate == '') {
             setErr({
                 isError: true,
-                message: 'graduates is required'
+                message: 'Graduation is required'
             })
         }
         else if (formInput.post_graduate == '') {
             setErr({
                 isError: true,
-                message: 'post_graduate is required'
+                message: 'Post graduate is required'
             })
         }
         else if (formInput.doctarate == '') {
             setErr({
                 isError: true,
-                message: 'doctarate is required'
+                message: 'Doctarate is required'
             })
         }
 
@@ -159,104 +160,109 @@ const Register = (props) => {
     return (
         <>
             <div className="reg-form">
-                <div className="reg-heading">User Registration</div>
                 <div className="reg-card">
+                    <div className="reg-heading">User Registration</div>
                     <form onSubmit={formSubmitHandler}>
-                        {err.isError ? <div>{err.message}</div> : null}
-                        <div className="reg-name">
-                            <label>Full Name : </label>
-                            <input type="text" placeholder='User Name' className="texts" onChange={full_nameHandler}></input>
+                        {err.isError ? <div className='errMessage'>{err.message}</div> : null}
+                        <div className="reg-group">
+                            <p>Full Name : </p>
+                            <input type="text" placeholder='User Name' className="texts" onChange={full_nameHandler} required></input>
                         </div>
                         <div className="reg-group">
-                            <label>Email : </label>
-                            <input type="email" placeholder="Email" onChange={emailHandler}></input>
+                            <p>Email : </p>
+                            <input type="email" placeholder="Email" onChange={emailHandler} required></input>
                         </div>
                         <div className="reg-group">
-                            <label>Enter profile pic link : </label>
-                            <input type="text" placeholder="Link" onChange={imageHandler}></input>
+                            <p>Enter profile pic link : </p>
+                            <input type="url" placeholder="Link" onChange={imageHandler} required></input>
                         </div>
                         <div className="clearfix"></div>
                         <div className="reg-group1">
-                            <label>Password : </label>
+                            <p>Password : </p>
                             <input type="password" placeholder='Password' onChange={passwordHandler}></input>
                         </div>
                         <div className="reg-group1">
-                            <label>Re-Enter Password : </label>
+                            <p>Re-Enter Password : </p>
                             <input type="password" placeholder='Confirm Password'></input>
                         </div>
-                        <div className='dropDown reg-secSchool'>
-                            <label>Secondary School : </label>
-                            <select onChange={secondary_schoolHandler}>
+                        <div className='eduDetails'>
+                            <div className='dropDown reg-secSchool'>
+                                <p>Secondary School : </p>
+                                <select onChange={secondary_schoolHandler}>
 
-                                <option selected value="none">N/A</option>
-                                <option value="Aditya Birla Public School, Rayagada">Aditya Birla Public School, Rayagada</option>
-                                <option value="Badagada Government School, Bhubaneswar">Badagada Government School, Bhubaneswar</option>
-                                <option value="Balangir Public School, Balangir">Balangir Public School, Balangir</option>
-                                <option value="Bhargabi School, Puri district">Bhargabi School, Puri district</option>
-                                <option value="Capital School, Bhubaneswar">Capital School, Bhubaneswar</option>
-                                <option value="Carmel School, Rourkela">Carmel School, Rourkela</option>
-                                <option value="D.A.V. Public School, Chandrasekharpur, Bhubaneswar">D.A.V. Public School, Chandrasekharpur, Bhubaneswar</option>
+                                    <option selected value="none">N/A</option>
+                                    <option value="Aditya Birla Public School, Rayagada">Aditya Birla Public School, Rayagada</option>
+                                    <option value="Badagada Government School, Bhubaneswar">Badagada Government School, Bhubaneswar</option>
+                                    <option value="Balangir Public School, Balangir">Balangir Public School, Balangir</option>
+                                    <option value="Bhargabi School, Puri district">Bhargabi School, Puri district</option>
+                                    <option value="Capital School, Bhubaneswar">Capital School, Bhubaneswar</option>
+                                    <option value="Carmel School, Rourkela">Carmel School, Rourkela</option>
+                                    <option value="D.A.V. Public School, Chandrasekharpur, Bhubaneswar">D.A.V. Public School, Chandrasekharpur, Bhubaneswar</option>
 
-                            </select>
-                        </div>
-                        <div className='dropDown reg-highSchool'>
-                            <label>High School : </label>
-                            <select onChange={high_schoolHandler}>
-                                <option default>Choose a High School</option>
-                                <option value="none">N/A</option>
-                                <option value="Aditya Birla Public High School, Rayagada">Aditya Birla Public High School, Rayagada</option>
-                                <option value="Badagada Government High School, Bhubaneswar">Badagada Government High School, Bhubaneswar</option>
-                                <option value="Balangir Public High School, Balangir">Balangir Public High School, Balangir</option>
-                                <option value="Bhargabi High School, Puri district">Bhargabi High School, Puri district</option>
-                                <option value="Carmel High School, Rourkela">Carmel High School, Rourkela</option>
-                                <option value="Capital High School, Bhubaneswar">Capital High School, Bhubaneswar</option>
-                                <option value="D.A.V. Public High School, Chandrasekharpur, Bhubaneswar">D.A.V. Public High School, Chandrasekharpur, Bhubaneswar</option>
+                                </select>
+                            </div>
+                            <div className='dropDown reg-highSchool'>
+                                <p>High School : </p>
+                                <select onChange={high_schoolHandler}>
+                                    <option default>Choose a High School</option>
+                                    <option value="none">N/A</option>
+                                    <option value="Aditya Birla Public High School, Rayagada">Aditya Birla Public High School, Rayagada</option>
+                                    <option value="Badagada Government High School, Bhubaneswar">Badagada Government High School, Bhubaneswar</option>
+                                    <option value="Balangir Public High School, Balangir">Balangir Public High School, Balangir</option>
+                                    <option value="Bhargabi High School, Puri district">Bhargabi High School, Puri district</option>
+                                    <option value="Carmel High School, Rourkela">Carmel High School, Rourkela</option>
+                                    <option value="Capital High School, Bhubaneswar">Capital High School, Bhubaneswar</option>
+                                    <option value="D.A.V. Public High School, Chandrasekharpur, Bhubaneswar">D.A.V. Public High School, Chandrasekharpur, Bhubaneswar</option>
 
-                            </select>
+                                </select>
+                            </div>
+                            <div className='dropDown reg-grad'>
+                                <p>Graduation : </p>
+                                <select onChange={graduateHandler}>
+                                    <option default>Choose a Graduate</option>
+                                    <option value="none">N/A</option>
+                                    <option value="Ekamra College, Bhubaneswar">Ekamra College, Bhubaneswar</option>
+                                    <option value="IIT Bhubaneswar, Bhubaneswar">IIT Bhubaneswar, Bhubaneswar</option>
+                                    <option value="Kalinga Intitute of Industrial Technology, Bhubaneswar">Kalinga Intitute of Industrial Technology, Bhubaneswar</option>
+                                    <option value="Odisha Uiversity of Technology and Research, Bhubaneswar">Odisha Uiversity of Technology and Research, Bhubaneswar</option>
+                                    <option value="Silicon Institute of Technology, Bhubaneswar">Silicon Institute of Technology, Bhubaneswar</option>
+                                    <option value="Trident Academy of Technology, Bhubaneswar">Trident Academy of Technology, Bhubaneswar</option>
+                                    <option value="NIT Rourkela">NIT Rourkela</option>
+                                </select>
+                            </div>
+                            <div className='dropDown reg-postGrad' >
+                                <p>Post Graduation : </p>
+                                <select onChange={post_graduateHandler} required>
+                                    <option default>Choose a Post Graduate</option>
+                                    <option value="none">N/A</option>
+                                    <option value="Bijepur College, Bargarh">Bijepur College, Bargarh</option>
+                                    <option value="IIT Bhubaneswar, Bhubaneswar">IIT Bhubaneswar, Bhubaneswar</option>
+                                    <option value="Kalinga Intitute of Industrial Technology, Bhubaneswar">Kalinga Intitute of Industrial Technology, Bhubaneswar</option>
+                                    <option value="Khallikote Autonomouse College, Berhampur">Khallikote Autonomouse College, Berhampur</option>
+                                    <option value="NIT Rourkela">NIT Rourkela</option>
+                                    <option value="Silicon Institute of Technology, Bhubaneswar">Silicon Institute of Technology, Bhubaneswar</option>
+                                    <option value="SCB Medical College, Cuttack">SCB Medical College, Cuttack</option>
+                                </select>
+                            </div>
+                            <div className='dropDown reg-doc'>
+                                <p>Doctarate : </p>
+                                <select onChange={doctarateHandler}>
+                                    <option default>Choose a Doctarate</option>
+                                    <option value="none">N/A</option>
+                                    <option value="GIET University, Rayagada">GIET University, Rayagada</option>
+                                    <option value="IIT Bhubaneswar, Bhubaneswar">IIT Bhubaneswar, Bhubaneswar</option>
+                                    <option value="Kalinga Intitute of Industrial Technology, Bhubaneswar">Kalinga Intitute of Industrial Technology, Bhubaneswar</option>
+                                    <option value="NIT Rourkela">NIT Rourkela</option>
+                                    <option value="Utkal University, Bhubaneswar">Utkal University, Bhubaneswar</option>
+                                </select>
+                            </div>
+                            <div className="reg-group button">
+                                <button className='reg-button'>Register</button>
+                            </div>
                         </div>
-                        <div>
-                            <label>Graduation : </label>
-                            <select onChange={graduateHandler}>
-                                <option default>Choose a Graduate</option>
-                                <option value="none">N/A</option>
-                                <option value="Ekamra College, Bhubaneswar">Ekamra College, Bhubaneswar</option>
-                                <option value="IIT Bhubaneswar, Bhubaneswar">IIT Bhubaneswar, Bhubaneswar</option>
-                                <option value="Kalinga Intitute of Industrial Technology, Bhubaneswar">Kalinga Intitute of Industrial Technology, Bhubaneswar</option>
-                                <option value="Odisha Uiversity of Technology and Research, Bhubaneswar">Odisha Uiversity of Technology and Research, Bhubaneswar</option>
-                                <option value="Silicon Institute of Technology, Bhubaneswar">Silicon Institute of Technology, Bhubaneswar</option>
-                                <option value="Trident Academy of Technology, Bhubaneswar">Trident Academy of Technology, Bhubaneswar</option>
-                                <option value="NIT Rourkela">NIT Rourkela</option>
-                            </select>
-                        </div>
-                        <div className='dropDown reg-postGrad'>
-                            <label>Post Graduation : </label>
-                            <select onChange={post_graduateHandler}>
-                                <option default>Choose a Post Graduate</option>
-                                <option value="none">N/A</option>
-                                <option value="Bijepur College, Bargarh">Bijepur College, Bargarh</option>
-                                <option value="IIT Bhubaneswar, Bhubaneswar">IIT Bhubaneswar, Bhubaneswar</option>
-                                <option value="Kalinga Intitute of Industrial Technology, Bhubaneswar">Kalinga Intitute of Industrial Technology, Bhubaneswar</option>
-                                <option value="Khallikote Autonomouse College, Berhampur">Khallikote Autonomouse College, Berhampur</option>
-                                <option value="NIT Rourkela">NIT Rourkela</option>
-                                <option value="Silicon Institute of Technology, Bhubaneswar">Silicon Institute of Technology, Bhubaneswar</option>
-                                <option value="SCB Medical College, Cuttack">SCB Medical College, Cuttack</option>
-                            </select>
-                        </div>
-                        <div className='dropDown reg-doc'>
-                            <label>Doctarate : </label>
-                            <select onChange={doctarateHandler}>
-                                <option default>Choose a Doctarate</option>
-                                <option value="none">N/A</option>
-                                <option value="GIET University, Rayagada">GIET University, Rayagada</option>
-                                <option value="IIT Bhubaneswar, Bhubaneswar">IIT Bhubaneswar, Bhubaneswar</option>
-                                <option value="Kalinga Intitute of Industrial Technology, Bhubaneswar">Kalinga Intitute of Industrial Technology, Bhubaneswar</option>
-                                <option value="NIT Rourkela">NIT Rourkela</option>
-                                <option value="Utkal University, Bhubaneswar">Utkal University, Bhubaneswar</option>
-                            </select>
-                        </div>
-                        <div className="reg-group">
-                            <button className='reg-button'>Register</button>
-                        </div>
+                        
+                            <p className='linkToLogIn'>Already have an account? <Link to="/login"><a>Login</a></Link></p>
+                        
                         <div className="clearfix"></div>
                     </form>
                 </div>
