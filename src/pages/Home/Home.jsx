@@ -46,18 +46,8 @@ const Home = () => {
 							<div className="homeLogoContainer">
 								<img src={homeLogo} />
 							</div>
-							<div className="aboutUsInfo">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Deleniti labore necessitatibus velit, aspernatur suscipit voluptas
-									accusamus nisi alias animi expedita minima natus sunt quidem, ipsum
-									ipsa numquam, doloremque ducimus quibusdam? Est tempora maxime eligendi
-									placeat ducimus hic magni quis consectetur a et dicta harum quasi repellendus
-									aliquid, fugit, totam sunt nisi ratione, doloribus magnam. Assumenda amet
-									totam tempore! Nihil facilis magni eius porro nulla recusandae modi
-									repellendus, rem quos possimus sunt numquam facere, id labore? Debitis
-									reiciendis distinctio magnam, corporis blanditiis ab suscipit libero
-									maxime dolorum! Provident sunt inventore illo in quaerat reprehenderit,
-									quae quibusdam vitae tempora tempore repellendus et!</p>
+							<div className="aboutUsInfo"> <p className="AlumniPara">Alumni Nest, a web App where the user can connect with their peers and alumni of their respective institute and can have interactions. The user can also post about their achievements and can write blogs.
+The Chat section helps the user to have one-to-one interactions. The Event feature allows the users to be pre-informred about the upcoming events.</p>
 							</div>
 						</div>
 					</Fade>
