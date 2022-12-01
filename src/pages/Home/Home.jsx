@@ -20,7 +20,10 @@ const Home = () => {
 					<Tada>
 					<div className="homeLogoMain">
 						<img src={Alumnlogo} />
-						<p className="Alumninest">Alumni Nest</p>
+						<p className="Alumninest">Alumni Nest</p> <br></br> <p className="quotem"> -Connecting Network</p>
+					</div>
+					<div>
+						<p className="quote1">"I think the success of any school can be measured by the contribution the alumni make to our national life." <br></br> ~ John F. Kennedy</p>
 					</div>
 					</Tada>
 					<Fade left>
@@ -86,6 +89,28 @@ const Home = () => {
 				<img src={teamProfile} />
 			</div>
 			</Fade>
+			<div className="whyUsBottom">
+
+							<Fade left>
+							<div className="homeLogoContainer">
+								<img src="https://res.cloudinary.com/db4zymomi/image/upload/hacknitr/Illustartion_vjqumg.png"  /> 
+							</div>
+							<div className="aboutUsInfo">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Deleniti labore necessitatibus velit, aspernatur suscipit voluptas
+									accusamus nisi alias animi expedita minima natus sunt quidem, ipsum
+									ipsa numquam, doloremque ducimus quibusdam? Est tempora maxime eligendi
+									placeat ducimus hic magni quis consectetur a et dicta harum quasi repellendus
+									aliquid, fugit, totam sunt nisi ratione, doloribus magnam. Assumenda amet
+									totam tempore! Nihil facilis magni eius porro nulla recusandae modi
+									repellendus, rem quos possimus sunt numquam facere, id labore? Debitis
+									reiciendis distinctio magnam, corporis blanditiis ab suscipit libero
+									maxime dolorum! Provident sunt inventore illo in quaerat reprehenderit,
+									quae quibusdam vitae tempora tempore repellendus et!</p>
+							</div>
+							</Fade>
+						</div>
+						
 			<Footer></Footer>
 		</div>
 	);

@@ -14,7 +14,19 @@
 .aboutUs{
   display: flex;
   flex-direction: column;
+  font-weight: 1000;
 
+}
+.quotem{
+  text-decoration-color: #66FCF1;
+  text-align: right;
+  text-size-adjust: 20px;
+}
+.quote1{
+  text-align: right;
+  margin-top: -100px;
+  color:rgb(255, 196, 0) !important;
+  text-indent: 10%;
 }
 
 .aboutUsBottom{
@@ -106,4 +118,15 @@
 .teamInfo img{
   width: 55%;
   margin: 4% 0 -5% 22.5%;
+}
+.whyUsBottom{
+  display: flex;
+  flex-direction: row;
+  background-color: #00000049;
+  padding: 2%;
+  margin: 2.5% 2.5% 0 0;
+
+}
+.whyUsBottom img{
+  margin-left:-4%;
 }
