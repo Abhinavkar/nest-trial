@@ -134,11 +134,11 @@ const Connections = () => {
 					</nav>
 				</div>
 			</div>
-			{/* <div className="liveChat">
+			{ <div className="liveChat">
 			<a href="https://chat-doxeo1j4l-abhinavkar.vercel.app/login" target="_blank">
-						<img  className="navigation-icon" src={alumniLogo} alt="Alumni Portal" />
+						<img  className="navigation-icon" src={""} alt="Alumni Portal" />
 					</a>
-			</div> */}
+			</div> }
 		</section>
 	);
 };
