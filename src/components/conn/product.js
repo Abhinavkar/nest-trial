@@ -15,7 +15,7 @@ const Product = (props)=>{
                 </div>
                 <div className="product_name">{props.product_name}</div>
                 {/* <div className="product_name">{props.product_description}</div> */}
-                <div className="product_price">{props.product_price}</div>
+                <div className="product_price">{props.product_price}<br/>2017</div>
                 
             </div>
         </div>
