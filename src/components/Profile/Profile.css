@@ -1,29 +1,25 @@
-.eventName2{
-    text-align: center;
-    margin-top: 5%;
-    font-size: 30px;
-    font-family: 'Anton', sans-serif;
-    color:black;
-    text-decoration: underline;
-    color: rgb(215, 183, 0);
+
+  .profileView{
+
+    color:aliceblue;
+    align-items: center;
+    align-content: center;
+    margin: 10% 42% 10% 35%;
+
   }
-  .eventDesc2{
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-top: 5%;
-    font-size: 14px;
-    color: rgb(255, 217, 0);
-  }
-  .recentEventsCard2{
-    /* border: 1px solid white; */
-    width: 22%;
-    margin-left: 1%;
-    background-color: rgba(255, 255, 255, 0.304);
-  }
-  .eventImage2 img{
-    height: 250px;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5%;
-    /* border: 1px solid white; */
-  }
+  
+.recentProfileCard{
+  /* border: 1px solid white; */
+  width: 200%;
+  align-items: center;
+  text-align: center;
+  margin-left: 1%;
+  background-color: rgba(255, 255, 255, 0.304);
+}
+.profileImage img{
+  height: 250px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid white; */
+}

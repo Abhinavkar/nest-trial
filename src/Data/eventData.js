@@ -1,4 +1,4 @@
-const productData = [
+const eventData = [
   {
     name: "Alumni Fest",
     image:
@@ -29,4 +29,4 @@ const productData = [
       desc: "02 . JAN . 2023 " 
     }
   ];
-  export default productData;
+  export default eventData;
