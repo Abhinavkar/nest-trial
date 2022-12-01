@@ -46,6 +46,22 @@ const HeaderUserMenu = ({logout,close}) => {
 						onClick={() => logout()}
 					/>
 					</Link>
+				{/* <Link to="/">
+					<Button
+						text={
+							<>
+								<span className="material-icons lg">logout</span>
+								<span>Logout</span>
+							</>
+						}
+						color="red"
+						variant=""
+						style={{
+							display: "flex",
+						}}
+						onClick={() => logout()}
+					/>
+					</Link> */}
 				</div>
 			</div>
 		</div>
